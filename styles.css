@@ -1,0 +1,32 @@
+/* Basic styling for the board and cells */
+#tic-tac-toe {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 300px;
+    height: 300px;
+}
+
+.cell {
+    box-sizing: border-box;
+    border: 1px solid black;
+    height: 100%;
+    width: 100%;
+}
+
+/* Add some spacing between the cells and rounded corners */
+.cell {
+    padding: 2px;
+    border-radius: 5px;
+}
+
+/* Add a subtle gradient to the cells */
+.cell {
+    background-image: linear-gradient(to bottom right, #EEE, #DDD);
+}
+
+/* Add some hover effects */
+.cell:hover {
+    background-color: #CCC;
+    cursor: pointer;
+}
