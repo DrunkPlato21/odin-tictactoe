@@ -1,3 +1,114 @@
+
+let currentGlobal
+
+
+const gameFlow = (() => {
+  // Define some variables to track the game state
+  let currentPlayer = "X";
+  let gameOver = false;
+
+  //put currentPlayer into a global variable
+  const getCurrentPlayer = () => {
+    currentGlobal = currentPlayer
+  }
+
+  // Define a function to switch the current player
+  const switchPlayer = () => {
+    currentPlayer = (currentPlayer === "X") ? "O" : "X";
+  };
+
+  // Define a function to check if the game is over
+  const checkGameOver = () => {
+    // Check if a player has won by checking the rows, columns, and diagonals
+    // If a player has won, set the gameOver flag to true
+  };
+
+  // Define a function to start a new game
+  const startGame = () => {
+    currentPlayer = "X";
+    gameOver = false;
+    // Clear the game board and update the display
+    gameBoard.clearBoard()
+  };
+
+
+  // Return an object containing the functions that should be accessible from outside the module
+  return {
+    switchPlayer,
+    checkGameOver,
+    startGame,
+    getCurrentPlayer
+  };
+})();
+
+
+const gameBoard = (() => {
+  // Define an array to represent the game board
+  const board = [
+    ["", "", ""],
+    ["", "", ""],
+    ["", "", ""]
+  ];
+
+  // Define a function to update the game board
+  const updateBoard = (row, col, value) => {
+    board[row][col] = value;
+  };
+
+  // Define a function to clear the game board
+  const clearBoard = () => {
+    for (let i = 0; i < board.length; i++) {
+      for (let j = 0; j < board[i].length; j++) {
+        board[i][j] = "";
+      }
+    }
+  };
+
+  // Return an object containing the functions that should be accessible from outside the module
+  return {
+    updateBoard,
+    clearBoard,
+    board
+  };
+})();
+
+
+
+const displayController = (()=>{
+
+  // Define a function to update the display with the current game state
+  const updateDisplay = () => {
+    // Clear the game board
+    gameBoard.clearBoard();
+    
+    // Update the game board with the latest values
+
+    let col1 = document.querySelector('#col1')
+    let col2 = document.querySelector('#col2')
+    let col3 = document.querySelector('#col3')
+
+    // Loop through the rows, columns, and cells and update the display
+    // with the current player's symbol (X or O)
+
+    // Check if the game is over, and if so, display a message
+    // indicating which player has won or if it's a tie
+  };
+
+  // Return an object containing the functions that should be accessible from outside the module
+  return {
+    updateDisplay
+  };
+
+
+
+})()
+
+
+
+
+
+
+
 function createPlayer(name, symbol) {
     return {
       name: name,
@@ -9,3 +120,30 @@ function createPlayer(name, symbol) {
 const player1 = createPlayer("Alice", "X");
 const player2 = createPlayer("Bob", "O");
 
+
+
+
+
+//gameboard event listener
+
+function listenGrid(){
+
+  let cells = document.querySelectorAll(".cell")
+
+    cells.forEach(function(cell){
+      cell.addEventListener('click', function(){
+
+        let row = cell.getAttribute('row')
+        let col = cell.getAttribute('col')
+
+        console.log(row, col)
+        gameFlow.getCurrentPlayer()
+        gameBoard.updateBoard(row,col,currentGlobal)
+        gameFlow.switchPlayer()
+        console.log(gameBoard.board)
+
+      })
+    })
+
+}
+listenGrid()

@@ -1,5 +1,5 @@
 /* Basic styling for the board and cells */
-#tic-tac-toe {
+#gameboard {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
