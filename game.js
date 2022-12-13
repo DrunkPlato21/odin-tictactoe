@@ -77,15 +77,20 @@ const gameBoard = (() => {
 const displayController = (()=>{
 
   // Define a function to update the display with the current game state
-  const updateDisplay = () => {
+  const updateDisplay = (row, col) => {
     // Clear the game board
     gameBoard.clearBoard();
     
     // Update the game board with the latest values
-
-    let col1 = document.querySelector('#col1')
-    let col2 = document.querySelector('#col2')
-    let col3 = document.querySelector('#col3')
+    let element
+    for (let i = 0; i < gameBoard.board.length; i++) {
+      for (let j = 0; j < gameBoard.board[i].length; j++) {
+        if (gameBoard.board[i][j] = "X"){
+          element = document.querySelector('[col="' + col + '"][row="' + row + '"]');
+          element.innerHTML = "X"
+        };
+      }
+    }
 
     // Loop through the rows, columns, and cells and update the display
     // with the current player's symbol (X or O)
@@ -140,10 +145,14 @@ function listenGrid(){
         gameFlow.getCurrentPlayer()
         gameBoard.updateBoard(row,col,currentGlobal)
         gameFlow.switchPlayer()
+        displayController.updateDisplay(row, col)
         console.log(gameBoard.board)
 
       })
     })
 
 }
+
+gameFlow.startGame()
+
 listenGrid()
