@@ -31,14 +31,25 @@
 <!-- HTML for the start game form -->
 <div class="start-form">
     <form>
-      <h1 id="enter-name-title">Enter Your Names</h1>
+      <h1 id="enter-name-title">Enter Player Names</h1>
       <div class="input-group">
-        <p class="label">Player 1:</p> <input type="text" name="player1" />
-        <p class="label">Player 2:</p> <input type="text" name="player2" />
+        <!-- <p class="label">Player 1:</p> --><input type="text" name="player1" placeholder="Player 1" /> 
+       <!-- <p class="label">Player 2:</p> --><input type="text" name="player2" placeholder="Player 2" />
       </div>
-      <input type="submit" value="Start game" />
+      <input type="submit" id="start-game" value="Start Game" />
     </form>
   </div>
+
+  <div class="game-over form-off">
+    
+      <h1 id="go-header">GAME OVER!</h1>      
+   
+        <div class="end-message"></div>
+ 
+        <input type="submit" id="restart-game" value="Play Again" />
+    
+  </div>
+  
   
 <footer>The Odin Project</footer>
 </body>

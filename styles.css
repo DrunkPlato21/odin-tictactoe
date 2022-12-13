@@ -49,7 +49,7 @@ body {
 /* START FORM */
 
 /* CSS for the start game form */
-.start-form {
+.start-form, .game-over {
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -63,6 +63,7 @@ body {
     box-shadow: 2px 2px 4px #CCC;
     background-color: #FFF;
   }
+
   
   .start-form form {
     display: flex;
@@ -88,6 +89,7 @@ body {
 
   #enter-name-title{
     margin-bottom: 10px;
+    margin-top:0px;
   }
   
   .start-form input[type="text"] {
@@ -96,9 +98,10 @@ body {
     font-size: 16px;
     border: 1px solid #CCC;
     box-shadow: inset 2px 2px 4px #CCC;
+    margin-top: 5px;
   }
   
-  .start-form input[type="submit"] {
+  .start-form input[type="submit"], .game-over input[type="submit"] {
     margin-top: 25px;
     padding: 10px 20px;
     font-size: 16px;
@@ -107,6 +110,10 @@ body {
     color: #FFF;
     border: none;
     box-shadow: 2px 2px 4px #6B0E6E;
+    cursor: pointer;
     
   }
   
+  .form-off{
+    display: none
+  }
