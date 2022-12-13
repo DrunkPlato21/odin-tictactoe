@@ -10,29 +10,36 @@
 </head>
 <body>
   <h1>Tic-Tac-Toe</h1>
- <div id="gameboard">
+ <div id="gameboard">   
 
-    
+    <!-- HTML for the start game form -->
 
             <div class="cell" col="0" row="0"></div>
             <div class="cell" col="1" row="0"></div>
             <div class="cell" col="2" row="0"></div>
-
         
             <div class="cell" col="0" row="1"></div>
             <div class="cell" col="1" row="1"></div>
-            <div class="cell" col="2" row="1"></div>
-
-   
+            <div class="cell" col="2" row="1"></div>   
 
             <div class="cell" col="0" row="2"></div>
             <div class="cell" col="1" row="2"></div>
             <div class="cell" col="2" row="2"></div>
 
-
-
 </div>
-    
+
+<!-- HTML for the start game form -->
+<div class="start-form">
+    <form>
+      <h1 id="enter-name-title">Enter Your Names</h1>
+      <div class="input-group">
+        <p class="label">Player 1:</p> <input type="text" name="player1" />
+        <p class="label">Player 2:</p> <input type="text" name="player2" />
+      </div>
+      <input type="submit" value="Start game" />
+    </form>
+  </div>
+  
 <footer>The Odin Project</footer>
 </body>
 </html>
