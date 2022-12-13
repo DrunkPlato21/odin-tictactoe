@@ -1,3 +1,10 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 /* Basic styling for the board and cells */
 #gameboard {
     display: grid;
@@ -33,7 +40,73 @@
 
 /* Add some hover effects */
 .cell:empty:hover {
-    background-image: linear-gradient(to bottom right, #EEE, #CCC);
+    background-image: linear-gradient(to bottom right, #EEE, #BBB);
 
     cursor: pointer;
 }
+
+
+/* START FORM */
+
+/* CSS for the start game form */
+.start-form {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 400px;
+    padding: 20px;
+    border: 1px solid #CCC;
+    box-shadow: 2px 2px 4px #CCC;
+    background-color: #FFF;
+  }
+  
+  .start-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .start-form label {
+    margin: 10px 0;
+  }
+
+  .input-group{
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .label {
+    margin: 10px;
+  }
+
+  #enter-name-title{
+    margin-bottom: 10px;
+  }
+  
+  .start-form input[type="text"] {
+    width: 40%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #CCC;
+    box-shadow: inset 2px 2px 4px #CCC;
+  }
+  
+  .start-form input[type="submit"] {
+    margin-top: 25px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #6B0E6E;
+    color: #FFF;
+    border: none;
+    box-shadow: 2px 2px 4px #6B0E6E;
+    
+  }
+  
