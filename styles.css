@@ -18,6 +18,12 @@
 .cell {
     padding: 2px;
     border-radius: 5px;
+    color: rgb(17, 17, 17);
+    font-size: 3em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Add a subtle gradient to the cells */
