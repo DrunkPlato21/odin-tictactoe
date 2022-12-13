@@ -32,7 +32,8 @@
 }
 
 /* Add some hover effects */
-.cell:hover {
-    background-color: #CCC;
+.cell:empty:hover {
+    background-image: linear-gradient(to bottom right, #EEE, #CCC);
+
     cursor: pointer;
 }
