@@ -1,6 +1,6 @@
 # odin-tictactoe project
 
-You can try it here: https://drunkplato21.github.io/odin-library/
+You can try it here: https://drunkplato21.github.io/odin-tictactoe/
 
 A simple JavaScript/HTML/CSS tic tac toe project where you can play tic tac toe with a friend
 
